@@ -1,7 +1,6 @@
 #include <ncurses.h>
 #include <string>
 #include <array>
-#include <cmath>
 #include <tuple>
 #include "digitalclock.hpp"
 
@@ -164,7 +163,7 @@ void DigitalClock::Draw(int timerElapsedMs, bool timerIsStopped = false) const {
     if (minModHr < 10) {
         DrawAsciiArt(zeroArt, currentPosX += COL_WIDTH, posY, willDigitOverflow(600000));
     } else {
-        DrawAsciiArt(GetAsciiArt((int) std::floor(minModHr / 10)), currentPosX += COL_WIDTH, posY, willDigitOverflow(600000));
+        DrawAsciiArt(GetAsciiArt((int) (minModHr / 10)), currentPosX += COL_WIDTH, posY, willDigitOverflow(600000));
     }
 
     // minutes (ones)
@@ -176,7 +175,7 @@ void DigitalClock::Draw(int timerElapsedMs, bool timerIsStopped = false) const {
     if (secModMin < 10) {
         DrawAsciiArt(zeroArt, currentPosX += COL_WIDTH, posY, willDigitOverflow(10000));
     } else {
-        DrawAsciiArt(GetAsciiArt((int) std::floor(secModMin / 10)), currentPosX += COL_WIDTH, posY, willDigitOverflow(10000));
+        DrawAsciiArt(GetAsciiArt((int) (secModMin / 10)), currentPosX += COL_WIDTH, posY, willDigitOverflow(10000));
     }
 
     // seconds (ones)
