@@ -1,5 +1,7 @@
 # CLI Stopwatch
 
+![timer preview](/assets/timer-preview.png)
+
 Simple stopwatch implemented using C/C++ and the NCurses library
 
 ## Requirements
