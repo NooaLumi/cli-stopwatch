@@ -7,4 +7,4 @@ Simple stopwatch implemented using C/C++ and the NCurses library
 - ncurses (ubuntu package: libncurses5-dev)
 
 ## Setup
-1. Run `make && timer`
+1. Run `make && ./timer`
